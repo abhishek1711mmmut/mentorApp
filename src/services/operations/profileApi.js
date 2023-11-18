@@ -11,16 +11,16 @@ export function getUserDetails(token, navigate) {
       const toastId = toast.loading("Loading...")
       dispatch(setLoading(true))
       try {
-        const response = await apiConnector("GET", GET_USER_DETAILS_API, null, {
-          Authorization: `Bearer ${token}`,
-        })
-        console.log("GET_USER_DETAILS API RESPONSE............", response)
+        // const response = await apiConnector("GET", GET_USER_DETAILS_API, null, {
+        //   Authorization: `Bearer ${token}`,
+        // })
+        // console.log("GET_USER_DETAILS API RESPONSE............", response)
   
-        if (!response.data.success) {
-          throw new Error(response.data.message)
-        }
+        // if (!response.data.success) {
+        //   throw new Error(response.data.message)
+        // }
         
-        dispatch(setUser(response.data.data))
+        // dispatch(setUser(response.data.data))
       } catch (error) {
         dispatch(logout(navigate))
         console.log("GET_USER_DETAILS API ERROR............", error)

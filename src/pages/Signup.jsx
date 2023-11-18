@@ -47,13 +47,13 @@ const Signup = () => {
 
     // console.log(signupData)
 
-    dispatch(signUp(firstName,
-      lastName,
-      email,
-      password,
-      confirmPassword,
-      accountType,
-      navigate))
+    // dispatch(signUp(firstName,
+    //   lastName,
+    //   email,
+    //   password,
+    //   confirmPassword,
+    //   accountType,
+    //   navigate))
 
     // Reset
     setFormData({

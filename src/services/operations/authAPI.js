@@ -21,20 +21,20 @@ const {
       const toastId = toast.loading("Loading...")
       dispatch(setLoading(true))
       try {
-        const response = await apiConnector("POST", SIGNUP_API, {
-          accountType,
-          firstName,
-          lastName,
-          email,
-          password,
-          confirmPassword,
-        })
+        // const response = await apiConnector("POST", SIGNUP_API, {
+        //   accountType,
+        //   firstName,
+        //   lastName,
+        //   email,
+        //   password,
+        //   confirmPassword,
+        // })
   
-        console.log("SIGNUP API RESPONSE............", response)
+        // console.log("SIGNUP API RESPONSE............", response)
   
-        if (!response.data.success) {
-          throw new Error(response.data.message)
-        }
+        // if (!response.data.success) {
+        //   throw new Error(response.data.message)
+        // }
         toast.success("Signup Successful")
         navigate(`/login/${accountType}`)
       } catch (error) {
@@ -52,23 +52,23 @@ export function login(email, password) {
       const toastId = toast.loading("Loading...")
       dispatch(setLoading(true))
       try {
-        const response = await apiConnector("POST", LOGIN_API, {
-          email,
-          password,
-        })
+        // const response = await apiConnector("POST", LOGIN_API, {
+        //   email,
+        //   password,
+        // })
   
-        console.log("LOGIN API RESPONSE............", response)
+        // console.log("LOGIN API RESPONSE............", response)
   
-        if (!response.data.success) {
-          throw new Error(response.data.message)
-        }
+        // if (!response.data.success) {
+        //   throw new Error(response.data.message)
+        // }
   
-        toast.success("Login Successful")
-        dispatch(setToken(response.data.token))
-        dispatch(setUser(response.data.user))
-        localStorage.setItem("token", JSON.stringify(response.data.token))
-        localStorage.setItem("user", JSON.stringify(response.data.user))
-        // navigate("/dashboard/my-appointments")
+        // toast.success("Login Successful")
+        // dispatch(setToken(response.data.token))
+        // dispatch(setUser(response.data.user))
+        // localStorage.setItem("token", JSON.stringify(response.data.token))
+        // localStorage.setItem("user", JSON.stringify(response.data.user))
+        navigate("/dashboard/my-appointments")
       } catch (error) {
         console.log("LOGIN API ERROR............", error)
         toast.error("Login Failed")

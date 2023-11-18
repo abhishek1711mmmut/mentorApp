@@ -15,9 +15,9 @@ const AllMentors = () => {
 
     useEffect(()=>{
         const getAllMentors=async()=>{
-            const res=await apiConnector("GET", profileEndpoints.GET_ALL_MENTOR_API, null, {Authorization: `Bearer ${token}`});
-            console.log("GET ALL MENTORS API RESPONSE....", res)
-            setAllMentors(res.data.data)
+            // const res=await apiConnector("GET", profileEndpoints.GET_ALL_MENTOR_API, null, {Authorization: `Bearer ${token}`});
+            // console.log("GET ALL MENTORS API RESPONSE....", res)
+            // setAllMentors(res.data.data)
         }
         getAllMentors();
     },[])

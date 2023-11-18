@@ -5,10 +5,7 @@ const CalendlyKey = () => {
   const [calendlyKey, setCalendlyKey] = useState("");
 
   const handleOnChange = (e) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [e.target.name]: e.target.value,
-    }))
+    
   }
 
   return (

@@ -15,7 +15,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getUserDetails } from './services/operations/profileApi';
 import Error from './pages/Error';
-import { useLocation, useNavigate } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 
 
 function App() {

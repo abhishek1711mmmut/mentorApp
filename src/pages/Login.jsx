@@ -26,7 +26,7 @@ const Login = () => {
     const handleOnSubmit=(e)=>{
         e.preventDefault()
         dispatch(login(email, password, navigate))
-        // navigate('/dashboard/my-appointments');
+        navigate('/dashboard/my-appointments');
     }
 
   return (

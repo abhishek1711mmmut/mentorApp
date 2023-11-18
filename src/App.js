@@ -15,12 +15,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getUserDetails } from './services/operations/profileApi';
 import Error from './pages/Error';
+import { useLocation, useNavigate } from "react-router-dom"
 
 
 function App() {
 
   const dispatch=useDispatch()
   const navigate=useNavigate()
+  const location=uselocation()
   const {user}=useSelector((state)=>state.auth)
 
   useEffect(()=>{
@@ -29,6 +31,10 @@ function App() {
       dispatch(getUserDetails(token, navigate))
     }
   },[])
+
+  useEffect(()=>{
+    console.log(location.pathname)
+  },[location.pathname])
 
   return (
     <div className="">
